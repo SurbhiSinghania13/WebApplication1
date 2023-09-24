@@ -9,6 +9,11 @@ namespace WebApplication1.Controllers
 {
     public class GreetingController : ApiController
     {
+        /// <summary>
+        /// This code prints hello world .
+        /// </summary>
+        /// <returns>Hello World</returns>
+
         //Post api/Greeting
         public string Post()
         {

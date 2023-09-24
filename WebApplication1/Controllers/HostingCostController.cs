@@ -11,6 +11,12 @@ namespace WebApplication1.Controllers
 
     public class HostingCostController : ApiController
     {
+        /// <summary>
+        /// This code prints 3 strings which describes the total hosting cost.
+        /// </summary>
+        /// <param name="id">0</param>
+        /// <returns>{"CostBeforeTax":"$5.50 (Cost before tax)","HST":"$0.72 (13% HST)","TotalCost":"$6.22 (Total cost including tax)"}</returns>
+         
         //Get api/HostingCost/{id}
         public IHttpActionResult Get(int id)
         {
