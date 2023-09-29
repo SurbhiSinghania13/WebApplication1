@@ -15,8 +15,8 @@ namespace WebApplication1.Controllers
         /// This code prints 3 strings which describes the total hosting cost.
         /// </summary>
         /// <param name="id">0</param>
-        /// <returns>{"CostBeforeTax":"$5.50 (Cost before tax)","HST":"$0.72 (13% HST)","TotalCost":"$6.22 (Total cost including tax)"}</returns>
-         
+        /// <returns>{"CostBeforeTax":"$5.50","HST":"$0.72","TotalCost":"$6.22"}</returns>
+
         //Get api/HostingCost/{id}
         public IHttpActionResult Get(int id)
         {
@@ -26,9 +26,9 @@ namespace WebApplication1.Controllers
             double hst = costBeforeTax * 0.13;
             double totalCost = costBeforeTax + hst;
 
-            string costDescription = $"${costBeforeTax:F2} (Cost before tax)";
-            string hstDescription = $"${hst:F2} (13% HST)";
-            string totalDescription = $"${totalCost:F2} (Total cost including tax)";
+            string costDescription = $"${costBeforeTax:F2}";
+            string hstDescription = $"${hst:F2}";
+            string totalDescription = $"${totalCost:F2}";
 
             return Ok(new { CostBeforeTax = costDescription, HST = hstDescription, TotalCost = totalDescription });
         }
